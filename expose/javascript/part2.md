@@ -1,3 +1,4 @@
+## Part 2
 1. It will print out **3** as it is the number of elements and the last value of i. Since i was declared within the function scope, it is able to print out the last value of i in line 12.
 
 2. It will print out **150** as it is the discounted price for the last item in the list, 300. Since it was the last value stored in discountedPrice after the loop ended and since discountedPrice was declared with var within the function, it can still be used and thus would return the last value stored within it. 
@@ -18,13 +19,17 @@
 
 10. It will return **3** as it is the length of the prices list that was declared and intialized at the beginning of the function as the length of the price list is 3. Its value will not change during the runtime of the function, thus it will print the value **3**.
 
-11. It will return **[ 50, 100, 150 ]**. It will generate the new discounted price for every price list item, since the const discountedPrice gets reintialized at every iteration of the loop, it is not being reintialized thus there is no error that is returned. Thus the function would run as expected by calculating each of the discounted prices and appending it to the discounted list and returning the output.
+11. It will return **[ 50, 100, 150 ]**. It will generate the new discounted price for every price list item, since the const discountedPrice gets reintialized at every iteration of the loop, it is not being reassigned thus there is no error that is returned. Thus the function would run as expected by calculating each of the discounted prices and appending it to the discounted list and returning the output.
 
 12.
   A. student.name
+
   B. student['Grad Year']
+  
   C. student.greeting()
+  
   D. student['Favorite Teacher'].name
+  
   E. student.courseLoad[0]
 
 13. 
@@ -35,7 +40,7 @@ It gave this output because it converted the integer 2 into the string '2' becau
 
 B. 1
 
-It gave this output because it converted the string '3' to be the numeric 3 because you're only able to subtract 3 and 2 and no string operation is posisble here with the - thus it subtracted the two numbers and returned 1.
+It gave this output because it converted the string '3' to be the numeric 3 because you're only able to subtract 3 and 2 and no string operation is possible here with the minus thus it subtracted the two numbers and returned 1.
 
 C. 3
 
@@ -43,7 +48,7 @@ It returned this output because it converted the null to the integer value 0 thu
 
 D. 3null
 
-It returned this output because it converted the null value to a string value and appended it to the string value '3' and returned 3null.
+It returned this output because it converted the null value to the string value 'null' and appended it to the string value '3' and returned 3null.
 
 E. 4
 
@@ -51,15 +56,15 @@ It returned 4 because it converted the boolean value true to be 1 and then added
 
 F. 0
 
-It returned 0 because it converted the boolean value of false to be 0 and added it to null to return 0.
+It returned 0 because it converted the boolean value of false to be 0 and the null value to be 0 to return 0 + 0 =0. Thus 0 is returned.
 
 G. 3undefined
 
-It returned 3undefined because it converted the undefined value into a string and appended it to the string value '3' and returned 3undefined. 
+It returned 3undefined because it converted the undefined value into a string 'undefined' and appended it to the string value '3' and returned 3undefined. 
 
 H. NaN
 
-It returns NaN because this operation doesn't return a valid number as it converted '3' into the numeric 3 and when subtracted by undefined, it would return an undefined number of NaN.
+It returns NaN because this operation doesn't return a valid number as it converted '3' into the numeric 3 and when subtracted by undefined which gets converted to the numeric value of NaN, it would return NaN.
 
 14. 
 
@@ -73,11 +78,11 @@ It returned false because it compared the two values lexicographically instead o
 
 C. true
 
-It returned true because it compared the two values numerically thus leading to the true response. 
+It returned true because it converted '2' to 2 and then compared the two values numerically thus leading to the true response. 
 
 D. false
 
-It returned false because it compared the two values both for value and type and since 2 is numeric and '2' is a string, it would return false.
+It returned false because it compared the two values both for value and type of value and since 2 is numeric and '2' is a string, it would return false.
 
 E. false
 
@@ -85,9 +90,9 @@ It returned false because it converted the true value into its numeric value of 
 
 F. true 
 
-It returned true because it converted the integer value of 2 into its boolean value and since 2>0, it automatically converted it to the boolean value of true. It then checked for equality of class and value for true and true thus it returned the value true.
+It returned true because it converted the integer value of 2 into its boolean value and since 2>0, it automatically converted it to the boolean value of true. It then checked for equality of class and value between true and true thus it returned the value true.
 
-15. The == operator checks only for equality after converting the required operands into the same class while the === operator checks for equaltiy of class and value of both operands without any automatic conversion of either operands.
+15. The == operator checks only for equality after automatically converting the required operands into the same class while the === operator checks for equaltiy of class and value of both operands without any automatic conversion of either operands.
 
 16. In the file titled part2-question16.js
 
@@ -101,4 +106,4 @@ It returned true because it converted the integer value of 2 into its boolean va
 3
 2
 
-The output comes in this format due to the setTimeout function. It prints 1 first and then since there is a time out set to the numbers 2 and 3, it had to wait. Since there is no timeout for console.log(4) thus it gets printed first followed by 3 as its timeout period would have ended followed later by 2 when its timeout period ends. Thus you get the output as above.
+The output comes in this format due to the setTimeout function. It prints 1 first and then since there is a time out set to the numbers 2 and 3, it has to wait. Since there is no timeout for console.log(4) thus it gets printed first followed by 3 as its timeout period would have ended followed later by 2 when its timeout period ends. Thus you get the output as above.
