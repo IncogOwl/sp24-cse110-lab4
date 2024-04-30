@@ -102,8 +102,11 @@ It returned true because it converted the integer value of 2 into its boolean va
 19. The output is presented in this format:
 
 1
+
 4
+
 3
+
 2
 
 The output comes in this format due to the setTimeout function. It prints 1 first and then since there is a time out set to the numbers 2 and 3, it has to wait. Since there is no timeout for console.log(4) thus it gets printed first followed by 3 as its timeout period would have ended followed later by 2 when its timeout period ends. Thus you get the output as above.
