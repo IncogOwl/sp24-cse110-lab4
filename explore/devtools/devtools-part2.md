@@ -1,0 +1,2 @@
+1. The bug was that the result variable was intialized to be string because the printSum() function converts the num1 and num2 variables to be string instead of numbers thus the result variable stores the concatenation of the two numbers instead of adding them together.
+2. I would fix this code by converting num1 and num2 from string to number and then using them as parameters in the calculateSum() function in order to return the correct output.
